@@ -641,3 +641,106 @@
 
 })();
 
+
+/* projects-carousel.js — Arrow nav, drag-to-scroll, and progress bar for the projects carousel */
+(function () {
+  'use strict';
+
+  const track   = document.getElementById('projects-track');
+  const prevBtn = document.getElementById('projects-prev');
+  const nextBtn = document.getElementById('projects-next');
+  const fill    = document.getElementById('projects-progress-fill');
+
+  if (!track) return;
+
+  function maxScroll() {
+    return track.scrollWidth - track.clientWidth;
+  }
+
+  function step() {
+    const card = track.querySelector('.project-card');
+    if (!card) return track.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0);
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updateUI() {
+    const max = maxScroll();
+    const pct = max > 0 ? (track.scrollLeft / max) * 100 : 0;
+    if (fill) fill.style.width = pct + '%';
+
+    if (prevBtn) prevBtn.disabled = track.scrollLeft <= 4;
+    if (nextBtn) nextBtn.disabled = track.scrollLeft >= max - 4;
+  }
+
+  /* ==================== ARROW NAV ==================== */
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -step(), behavior: 'smooth' });
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: step(), behavior: 'smooth' });
+    });
+  }
+
+  /* ==================== KEYBOARD NAV ==================== */
+  track.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: step(), behavior: 'smooth' }); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); track.scrollBy({ left: -step(), behavior: 'smooth' }); }
+  });
+
+  /* ==================== DRAG TO SCROLL (mouse) ==================== */
+  let isDown = false;
+  let startX = 0;
+  let startScroll = 0;
+  let dragged = false;
+
+  track.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'touch') return; // native touch scrolling handles this
+    if (e.target.closest('a, button')) return; // let clicks on links/buttons through untouched
+    isDown = true;
+    dragged = false;
+    track.classList.add('is-dragging');
+    startX = e.clientX;
+    startScroll = track.scrollLeft;
+    track.setPointerCapture(e.pointerId);
+  });
+
+  track.addEventListener('pointermove', e => {
+    if (!isDown) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) dragged = true;
+    track.scrollLeft = startScroll - dx;
+  });
+
+  function endDrag() {
+    if (!isDown) return;
+    isDown = false;
+    track.classList.remove('is-dragging');
+    if (dragged) {
+      /* Snap to nearest card after a free drag */
+      const s = step();
+      const nearest = Math.round(track.scrollLeft / s) * s;
+      track.scrollTo({ left: nearest, behavior: 'smooth' });
+    }
+  }
+
+  track.addEventListener('pointerup', endDrag);
+  track.addEventListener('pointerleave', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+
+  /* Prevent the click-through on Visit Site links right after a drag */
+  track.addEventListener('click', e => {
+    if (dragged) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+
+  /* ==================== PROGRESS + SCROLL SYNC ==================== */
+  track.addEventListener('scroll', () => window.requestAnimationFrame(updateUI), { passive: true });
+  window.addEventListener('resize', updateUI);
+
+  updateUI();
+})();
+

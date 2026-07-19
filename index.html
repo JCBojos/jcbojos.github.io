@@ -555,133 +555,427 @@
       <div class="container">
         <div class="section-eyebrow reveal-up">Featured Work</div>
         <h2 class="section-title reveal-up" id="projects-heading">Projects I'm proud of.</h2>
-        <p class="section-subtitle reveal-up">Real-world websites built with attention to detail, performance, and user experience.</p>
+        <p class="section-subtitle reveal-up">Real-world websites I've maintained and modified — including select inner pages designed and built from scratch.</p>
 
-        <div class="projects__grid">
+<div class="projects__carousel-wrap">
+          <button class="carousel-arrow carousel-arrow--prev" id="projects-prev" type="button" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
 
+          <div class="projects__track" id="projects-track" tabindex="0" aria-label="Projects carousel, scroll or use arrow buttons to navigate">
           <!-- Project 1 -->
-          <article class="project-card glass-card reveal-up" aria-label="Business Website project">
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Gamma Honors project">
             <div class="project-card__media">
-              <div class="project-card__thumbnail project-card__thumbnail--1" aria-label="Project screenshot placeholder"></div>
+              <img class="project-card__thumbnail" src="includes/images/projects/gammahonors.jpg" alt="Gamma Honors homepage screenshot" loading="lazy" decoding="async">
               <div class="project-card__overlay">
-                <a href="#" class="btn btn--sm btn--primary" aria-label="View live demo of business website">Live Demo</a>
-                <a href="#" class="btn btn--sm btn--outline" aria-label="View GitHub code for business website">GitHub</a>
+                <a href="https://www.gammahonors.org" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Gamma Honors">Visit Site</a>
               </div>
-              <span class="project-card__category">Business Website</span>
+              <span class="project-card__category">Academic Honor Society</span>
             </div>
             <div class="project-card__body">
-              <h3 class="project-card__title">Corporate Business Website</h3>
-              <p class="project-card__desc">
-                A full-featured corporate website with service pages, team section, contact form, and blog.
-              </p>
-              <ul class="project-card__features" role="list">
-                <li>Responsive across all devices</li>
-                <li>SEO-optimized structure</li>
-                <li>Custom contact form with validation</li>
-                <li>Lazy-loaded image gallery</li>
-              </ul>
-              <div class="project-card__tech">
-                <span class="tech-pill">HTML5</span>
-                <span class="tech-pill">CSS3</span>
-                <span class="tech-pill">JavaScript</span>
-                <span class="tech-pill">PHP</span>
-              </div>
+              <h3 class="project-card__title">Gamma Honors</h3>
+              <span class="project-card__subcat">Academic Honor Society</span>
             </div>
           </article>
 
           <!-- Project 2 -->
-          <article class="project-card glass-card reveal-up" aria-label="WordPress Website project">
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Bell Counseling Services project">
             <div class="project-card__media">
-              <div class="project-card__thumbnail project-card__thumbnail--2" aria-label="Project screenshot placeholder"></div>
+              <img class="project-card__thumbnail" src="includes/images/projects/bellcounseling.jpg" alt="Bell Counseling Services homepage screenshot" loading="lazy" decoding="async">
               <div class="project-card__overlay">
-                <a href="#" class="btn btn--sm btn--primary" aria-label="View live demo of WordPress website">Live Demo</a>
-                <a href="#" class="btn btn--sm btn--outline" aria-label="View GitHub code for WordPress website">GitHub</a>
+                <a href="http://www.bellcounselingservices.com" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Bell Counseling Services">Visit Site</a>
               </div>
-              <span class="project-card__category">WordPress</span>
+              <span class="project-card__category">Counseling Services</span>
             </div>
             <div class="project-card__body">
-              <h3 class="project-card__title">Custom WordPress Theme</h3>
-              <p class="project-card__desc">
-                A bespoke WordPress theme built from scratch — no page builders. Custom post types, 
-                ACF integration, and a fully manageable CMS for non-technical clients.
-              </p>
-              <ul class="project-card__features" role="list">
-                <li>Custom post types &amp; taxonomies</li>
-                <li>ACF field integration</li>
-                <li>WooCommerce compatible</li>
-                <li>90+ PageSpeed score</li>
-              </ul>
-              <div class="project-card__tech">
-                <span class="tech-pill">WordPress</span>
-                <span class="tech-pill">PHP</span>
-                <!-- <span class="tech-pill">SCSS</span> -->
-                <span class="tech-pill">MySQL</span>
-              </div>
+              <h3 class="project-card__title">Bell Counseling Services</h3>
+              <span class="project-card__subcat">Counseling Services</span>
             </div>
           </article>
 
           <!-- Project 3 -->
-          <article class="project-card glass-card reveal-up" aria-label="Equipment Rental Website project">
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Dahlia Montessori & Spanish Immersion project">
             <div class="project-card__media">
-              <div class="project-card__thumbnail project-card__thumbnail--3" aria-label="Project screenshot placeholder"></div>
+              <img class="project-card__thumbnail" src="includes/images/projects/dahliaaustin.jpg" alt="Dahlia Montessori & Spanish Immersion homepage screenshot" loading="lazy" decoding="async">
               <div class="project-card__overlay">
-                <a href="#" class="btn btn--sm btn--primary" aria-label="View live demo of equipment rental website">Live Demo</a>
-                <a href="#" class="btn btn--sm btn--outline" aria-label="View GitHub code for equipment rental website">GitHub</a>
+                <a href="https://www.dahliaaustin.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Dahlia Montessori & Spanish Immersion">Visit Site</a>
               </div>
-              <span class="project-card__category">Equipment Rental</span>
+              <span class="project-card__category">Montessori School</span>
             </div>
             <div class="project-card__body">
-              <h3 class="project-card__title">Equipment Rental Platform</h3>
-              <p class="project-card__desc">
-                A dynamic equipment rental website with product catalog, filtering system, 
-                inquiry forms, and availability calendar — streamlining client-customer interaction.
-              </p>
-              <ul class="project-card__features" role="list">
-                <li>Dynamic product filtering</li>
-                <li>Availability calendar</li>
-                <li>Multi-step inquiry form</li>
-                <li>Mobile-first design</li>
-              </ul>
-              <div class="project-card__tech">
-                <span class="tech-pill">HTML5</span>
-                <span class="tech-pill">CSS3</span>
-                <span class="tech-pill">JavaScript</span>
-                <span class="tech-pill">PHP</span>
-              </div>
+              <h3 class="project-card__title">Dahlia Montessori & Spanish Immersion</h3>
+              <span class="project-card__subcat">Montessori School</span>
             </div>
           </article>
 
           <!-- Project 4 -->
-          <article class="project-card glass-card reveal-up" aria-label="Landing Page project">
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Ohana Heart project">
             <div class="project-card__media">
-              <div class="project-card__thumbnail project-card__thumbnail--4" aria-label="Project screenshot placeholder"></div>
+              <img class="project-card__thumbnail" src="includes/images/projects/ohanaheart.jpg" alt="Ohana Heart homepage screenshot" loading="lazy" decoding="async">
               <div class="project-card__overlay">
-                <a href="#" class="btn btn--sm btn--primary" aria-label="View live demo of landing page">Live Demo</a>
-                <a href="#" class="btn btn--sm btn--outline" aria-label="View GitHub code for landing page">GitHub</a>
+                <a href="https://www.ohanaheart.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Ohana Heart">Visit Site</a>
               </div>
-              <span class="project-card__category">Landing Page</span>
+              <span class="project-card__category">Cardiology Practice</span>
             </div>
             <div class="project-card__body">
-              <h3 class="project-card__title">High-Conversion Landing Page</h3>
-              <p class="project-card__desc">
-                A conversion-focused landing page with animated hero, testimonial slider, 
-                pricing table, and A/B-testable CTA sections for a SaaS product.
-              </p>
-              <ul class="project-card__features" role="list">
-                <li>Animated hero section</li>
-                <!-- <li>Swiper.js testimonial slider</li> -->
-                <li>Responsive pricing table</li>
-                <!-- <li>98 Lighthouse performance</li> -->
-              </ul>
-              <div class="project-card__tech">
-                <span class="tech-pill">HTML5</span>
-                <!-- <span class="tech-pill">SCSS</span> -->
-                <span class="tech-pill">JavaScript</span>
-                <!-- <span class="tech-pill">Swiper.js</span> -->
-              </div>
+              <h3 class="project-card__title">Ohana Heart</h3>
+              <span class="project-card__subcat">Cardiology Practice</span>
             </div>
           </article>
 
+          <!-- Project 5 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Haymarket Early Learning Center project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/haymarketca.jpg" alt="Haymarket Early Learning Center homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.haymarketca.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Haymarket Early Learning Center">Visit Site</a>
+              </div>
+              <span class="project-card__category">Childcare & Education</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Haymarket Early Learning Center</h3>
+              <span class="project-card__subcat">Childcare & Education</span>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Red Tail Transit project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/redtailtransit.jpg" alt="Red Tail Transit homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.redtailtransit.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Red Tail Transit">Visit Site</a>
+              </div>
+              <span class="project-card__category">Non-Emergency Medical Transport</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Red Tail Transit</h3>
+              <span class="project-card__subcat">Non-Emergency Medical Transport</span>
+            </div>
+          </article>
+
+          <!-- Project 7 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Henderson Independent Living project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/hendersonindependentliving.jpg" alt="Henderson Independent Living homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.hendersonindependentliving.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Henderson Independent Living">Visit Site</a>
+              </div>
+              <span class="project-card__category">Independent Living Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Henderson Independent Living</h3>
+              <span class="project-card__subcat">Independent Living Services</span>
+            </div>
+          </article>
+
+          <!-- Project 8 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="First Step Therapy project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/firststeptherapy.jpg" alt="First Step Therapy homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.firststeptherapy.org/home" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for First Step Therapy">Visit Site</a>
+              </div>
+              <span class="project-card__category">Therapy Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">First Step Therapy</h3>
+              <span class="project-card__subcat">Therapy Services</span>
+            </div>
+          </article>
+
+          <!-- Project 9 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="1st Las Vegas Home Care project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/1stlasvegashomecare.jpg" alt="1st Las Vegas Home Care homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.1stlasvegashomecare.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for 1st Las Vegas Home Care">Visit Site</a>
+              </div>
+              <span class="project-card__category">Home Care Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">1st Las Vegas Home Care</h3>
+              <span class="project-card__subcat">Home Care Services</span>
+            </div>
+          </article>
+
+          <!-- Project 10 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Caution Fire Prevention project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/cautionfireprevention.jpg" alt="Caution Fire Prevention homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.cautionfireprevention.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Caution Fire Prevention">Visit Site</a>
+              </div>
+              <span class="project-card__category">Fire & Safety Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Caution Fire Prevention</h3>
+              <span class="project-card__subcat">Fire & Safety Services</span>
+            </div>
+          </article>
+
+          <!-- Project 11 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Visiting RN project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/visitingrn.jpg" alt="Visiting RN homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.visitingrn.org/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Visiting RN">Visit Site</a>
+              </div>
+              <span class="project-card__category">Integrated Healthcare Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Visiting RN</h3>
+              <span class="project-card__subcat">Integrated Healthcare Services</span>
+            </div>
+          </article>
+
+          <!-- Project 12 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="French Maternal School project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/frenchmaternalschool.jpg" alt="French Maternal School homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.frenchmaternalschool.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for French Maternal School">Visit Site</a>
+              </div>
+              <span class="project-card__category">French Immersion Preschool</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">French Maternal School</h3>
+              <span class="project-card__subcat">French Immersion Preschool</span>
+            </div>
+          </article>
+
+          <!-- Project 13 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Circle of Friends Pre-K project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/circleoffriendsprek.jpg" alt="Circle of Friends Pre-K homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.circleoffriendsprek.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Circle of Friends Pre-K">Visit Site</a>
+              </div>
+              <span class="project-card__category">Childcare & Education</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Circle of Friends Pre-K</h3>
+              <span class="project-card__subcat">Childcare & Education</span>
+            </div>
+          </article>
+
+          <!-- Project 14 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Yenko project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/yenko.jpg" alt="Yenko homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.yenko.org/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Yenko">Visit Site</a>
+              </div>
+              <span class="project-card__category">Wellness & Culture Nonprofit</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Yenko</h3>
+              <span class="project-card__subcat">Wellness & Culture Nonprofit</span>
+            </div>
+          </article>
+
+          <!-- Project 15 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Am Blessed Transportation project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/amblessedtransportation.jpg" alt="Am Blessed Transportation homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.amblessedtransportation.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Am Blessed Transportation">Visit Site</a>
+              </div>
+              <span class="project-card__category">Non-Emergency Medical Transport</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Am Blessed Transportation</h3>
+              <span class="project-card__subcat">Non-Emergency Medical Transport</span>
+            </div>
+          </article>
+
+          <!-- Project 16 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Blossom Tree Healthcare project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/blossomtreehc.jpg" alt="Blossom Tree Healthcare homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.blossomtreehc.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Blossom Tree Healthcare">Visit Site</a>
+              </div>
+              <span class="project-card__category">Outpatient Addiction Treatment</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Blossom Tree Healthcare</h3>
+              <span class="project-card__subcat">Outpatient Addiction Treatment</span>
+            </div>
+          </article>
+
+          <!-- Project 17 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Thoughts of Hope project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/thoughtsofhopellc.jpg" alt="Thoughts of Hope homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.thoughtsofhopellc.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Thoughts of Hope">Visit Site</a>
+              </div>
+              <span class="project-card__category">Psychiatric & Psychotherapy</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Thoughts of Hope</h3>
+              <span class="project-card__subcat">Psychiatric & Psychotherapy</span>
+            </div>
+          </article>
+
+          <!-- Project 18 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Vellon Placement Advisor project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/vellonplacementadvisor.jpg" alt="Vellon Placement Advisor homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.vellonplacementadvisor.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Vellon Placement Advisor">Visit Site</a>
+              </div>
+              <span class="project-card__category">Senior Placement Agency</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Vellon Placement Advisor</h3>
+              <span class="project-card__subcat">Senior Placement Agency</span>
+            </div>
+          </article>
+
+          <!-- Project 19 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="TrueMind Psychiatric Care project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/truemindpsych.jpg" alt="TrueMind Psychiatric Care homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.truemindpsych.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for TrueMind Psychiatric Care">Visit Site</a>
+              </div>
+              <span class="project-card__category">Psychiatric & Behavioral Health</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">TrueMind Psychiatric Care</h3>
+              <span class="project-card__subcat">Psychiatric & Behavioral Health</span>
+            </div>
+          </article>
+
+          <!-- Project 20 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="ArkCare project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/arkcare.jpg" alt="ArkCare homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.arkcare.care/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for ArkCare">Visit Site</a>
+              </div>
+              <span class="project-card__category">Home Care Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">ArkCare</h3>
+              <span class="project-card__subcat">Home Care Services</span>
+            </div>
+          </article>
+
+          <!-- Project 21 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Above and Beyond Home Care project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/aboveandbeyondhomecareca.jpg" alt="Above and Beyond Home Care homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.aboveandbeyondhomecareca.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Above and Beyond Home Care">Visit Site</a>
+              </div>
+              <span class="project-card__category">Home Care Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Above and Beyond Home Care</h3>
+              <span class="project-card__subcat">Home Care Services</span>
+            </div>
+          </article>
+
+          <!-- Project 22 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Trivedi Consulting Group project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/trivediconsultinggroup.jpg" alt="Trivedi Consulting Group homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.trivediconsultinggroup.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Trivedi Consulting Group">Visit Site</a>
+              </div>
+              <span class="project-card__category">IT Consulting</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Trivedi Consulting Group</h3>
+              <span class="project-card__subcat">IT Consulting</span>
+            </div>
+          </article>
+
+          <!-- Project 23 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Forward Fast Now project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/forwardfastnow.jpg" alt="Forward Fast Now homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="http://www.forwardfastnow.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Forward Fast Now">Visit Site</a>
+              </div>
+              <span class="project-card__category">Leadership & Performance Coaching</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Forward Fast Now</h3>
+              <span class="project-card__subcat">Leadership & Performance Coaching</span>
+            </div>
+          </article>
+
+          <!-- Project 24 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Wee Care Day Care project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/weecaredc.jpg" alt="Wee Care Day Care homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.weecaredc.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Wee Care Day Care">Visit Site</a>
+              </div>
+              <span class="project-card__category">Childcare & Education</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Wee Care Day Care</h3>
+              <span class="project-card__subcat">Childcare & Education</span>
+            </div>
+          </article>
+
+          <!-- Project 25 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Joy Filled ABA project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/joyfilledaba.jpg" alt="Joy Filled ABA homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://joyfilledaba.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Joy Filled ABA">Visit Site</a>
+              </div>
+              <span class="project-card__category">ABA Therapy Services</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Joy Filled ABA</h3>
+              <span class="project-card__subcat">ABA Therapy Services</span>
+            </div>
+          </article>
+
+          <!-- Project 26 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Bald Mountain Pharmacy project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/baldmountainpharmacy.jpg" alt="Bald Mountain Pharmacy homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.baldmountainpharmacy.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Bald Mountain Pharmacy">Visit Site</a>
+              </div>
+              <span class="project-card__category">Pharmacy</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Bald Mountain Pharmacy</h3>
+              <span class="project-card__subcat">Pharmacy</span>
+            </div>
+          </article>
+
+          <!-- Project 27 -->
+          <article class="project-card project-card--compact glass-card reveal-up" aria-label="Smart CareGenius project">
+            <div class="project-card__media">
+              <img class="project-card__thumbnail" src="includes/images/projects/smartcaregenius.jpg" alt="Smart CareGenius homepage screenshot" loading="lazy" decoding="async">
+              <div class="project-card__overlay">
+                <a href="https://www.smartcaregenius.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" aria-label="Visit live site for Smart CareGenius">Visit Site</a>
+              </div>
+              <span class="project-card__category">Healthcare</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Smart CareGenius</h3>
+              <span class="project-card__subcat">Healthcare</span>
+            </div>
+          </article>
+          </div>
+
+          <button class="carousel-arrow carousel-arrow--next" id="projects-next" type="button" aria-label="Next project">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <div class="projects__progress" aria-hidden="true">
+          <div class="projects__progress-fill" id="projects-progress-fill"></div>
         </div>
       </div>
     </section>
