@@ -285,6 +285,21 @@
     });
   }
 
+  /* ==================== FAVICON SYNC ====================
+     Rebuilds the favicon from the currently active --clr-primary so it
+     always matches whatever [data-scheme]/[data-theme] is applied,
+     instead of a hardcoded color baked into the <link> tag. */
+  function syncFavicon() {
+    const favicon = document.querySelector('link[rel="icon"]');
+    if (!favicon) return;
+    const accent = getComputedStyle(document.documentElement)
+      .getPropertyValue('--clr-primary').trim() || '#7C3AED';
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>` +
+      `<rect width='100' height='100' rx='20' fill='${accent}'/>` +
+      `<text y='.9em' font-size='70' x='15' fill='white' font-family='monospace' font-weight='bold'>JCB</text></svg>`;
+    favicon.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(svg));
+  }
+
   /* ==================== THEME TOGGLE ==================== */
   (function () {
     const root = document.documentElement;
@@ -308,6 +323,7 @@
       if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#F7F8FB' : '#080B14');
       toggles.forEach(btn => btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false'));
       mobileLabels.forEach(label => { label.textContent = theme === 'light' ? 'Dark mode' : 'Light mode'; });
+      syncFavicon();
     }
 
     let current = readStoredTheme() || (root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
